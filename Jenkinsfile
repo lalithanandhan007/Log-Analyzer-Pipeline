@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                git 'YOUR_GITHUB_REPO_LINK'
-            }
-        }
-
         stage('Run Python Script') {
             steps {
                 bat 'python analyzer.py'
